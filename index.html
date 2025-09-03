@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unified Cart POC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><h1>Unified Cart</h1><p>Bundle goodies from multiple stores into one cart</p></div>
+  </header>
+  <main class="main">
+    <section class="left">
+      <div class="controls">
+        <select id="storeFilter"><option value="all">All stores</option></select>
+        <input id="searchInput" placeholder="Search products..." />
+      </div>
+      <div id="products" class="products"></div>
+    </section>
+    <aside class="right cart">
+      <h2>Your Unified Cart</h2>
+      <div id="cartItems"></div>
+      <div id="storeBreakdown" class="breakdown"></div>
+      <div class="total">Total: <span id="grandTotal">$0.00</span></div>
+      <button id="checkoutBtn">Simulated One-Click Checkout</button>
+      <button id="shareBtn">Share Cart Link</button>
+    </aside>
+  </main>
+
+  <template id="productTpl">
+    <div class="product">
+      <div class="meta">
+        <strong class="name"></strong>
+        <div class="badges"></div>
+      </div>
+      <div class="price-add">
+        <div class="price"></div>
+        <button class="add">Add</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
